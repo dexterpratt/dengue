@@ -19,7 +19,6 @@ def save_log(LOG_FILE,log_data):
 def estimate_cost(tokens, rate_per_token):
     return tokens * rate_per_token
 
-# echo 'export OPENAI_API_KEY="value"' >> ~/.zshrc
 def openai_chat(context, prompt, model,temperature, max_tokens, LOG_FILE, rate_per_token=0.0,  DOLLAR_LIMIT=100.0, seed: int = None):
     print(os.environ)
     key = os.environ.get('OPENAI_API_KEY')
